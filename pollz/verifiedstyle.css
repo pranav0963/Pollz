@@ -1,0 +1,272 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 10%;
+    background: transparent;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all 0.55s ease;
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    /*display: none;*/
+    left: 0;
+    transition: all ease-in-out 300ms;
+    transform: translateX(-100%);
+    background-color: #ffffff;
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+.sidebar h2 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #ffffff;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(245.59deg, #f1b04c 0%, #ec9007 28.53%, #dc6601 75.52%);
+}
+
+.contact-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-middle {
+    width: 100vh;
+    color: #ffffff;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-left-title {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contact-left-title hr {
+    border: none;
+    width: 430px;
+    height: 5px;
+    background-color: #111111;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-inputs {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+
+
+.contact-inputs::placeholder {
+    color: #a9a9a9;
+}
+
+.contact-left button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #000000, #111111);
+    cursor: pointer;
+}
+
+.contact-left button img {
+    height: 15px;
+}
+
+.contact-right img {
+    width: 500px;
+}
+
+.hero-img img {
+    width: 500px;
+    height: auto;
+}
+
+.hero-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 200px;
+    position: relative;
+}
+
+.poll-option {
+    width: 50px;
+    background-color: white;
+    cursor: pointer;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: height 0.5s ease, transform 0.5s ease;
+}
+
+#option1 {
+    height: 150px;
+}
+
+#option2 {
+    height: 250px;
+}
+
+#option3 {
+    height: 200px;
+}
+
+.poll-option:hover {
+    height: 300px;
+    transform: translateY(-100px);
+}
+
+.Copyright {
+    position: absolute;
+    bottom: 6%;
+    left: 9%;
+    color: white;
+    font-size: small;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+
+    body {
+        overflow-y: hidden;
+    }
+
+    .navlist {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .contact-container {
+        height: calc(100vh - 120px);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: j;
+        gap: 30px;
+        padding: 20px;
+        margin-top: 60px;
+        margin-bottom: 60px; 
+        overflow-y: auto;
+    }
+
+    .contact-middle{
+        font-size: 12px;
+    }
+    .contact-middle {
+        width: 85%;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-img {
+        gap: 5px;
+    }
+
+    .poll-option {
+        display: none;
+    }
+
+    .Copyright{
+        margin-right: 7px;
+    }
+}

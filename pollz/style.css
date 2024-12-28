@@ -1,0 +1,380 @@
+* {
+    padding: .0;
+    margin: .0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 10%;
+    background: transparent;
+}
+
+body{
+    background: linear-gradient(245.59deg, #f1b04c 0%, #ec9007 28.53%, #dc6601 75.52%);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all 0.55s ease;
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white;
+}
+
+.hamburger {
+	display: none;
+	flex-direction: column;
+	gap: 5px;
+	cursor: pointer;
+}
+
+.hamburger span {
+	width: 25px;
+	height: 3px;
+	background-color: #ffffff;
+}
+
+.sidebar {
+	height: 100vh;
+	width: 250px;
+	position: fixed;
+	top: 0;
+	/*display: none;*/
+	left: 0;
+	transition: all ease-in-out 300ms;
+	transform: translateX(-100%);
+	background-color: #ffffff;
+	padding-top: 20px;
+	z-index: 1000;
+}
+
+.sidebar h2 {
+	color: #000000;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.sidebar ul {
+	list-style-type: none;
+}
+
+.sidebar ul li {
+	padding: 10px;
+	text-align: center;
+}
+
+.sidebar ul li a {
+	color: #000000;
+	text-decoration: none;
+	display: block;
+}
+
+.sidebar ul li a:hover {
+	background-color: #ffffff;
+}
+
+.hero {
+    /* height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #f1b04c 0%, #ec9007 28.53%, #dc6601 75.52%);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(245.59deg, #f1b04c 0%, #ec9007 28.53%, #dc6601 75.52%);
+}
+
+.hero-text h5 {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.hero-text h1 {
+    font-family: "Anta", sans-serif;
+    font-size: 90px;
+    line-height: 1;
+    color: white;
+    margin: 0 0 45px;
+}
+
+.hero-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+.hero-img img {
+    width: 500px;
+    height: auto;
+}
+
+.hero-text a {
+    display: inline-block;
+    color: white;
+    background: #f1b04c;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all 0.55s ease;
+}
+
+.hero-text a:hover {
+    background: transparent;
+    border: 1px solid white;
+    transform: translate(8px);
+}
+
+.hero-text a.ctaa {
+    background: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.hero-text a.ctaa i {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icons {
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    color: white;
+    transition: all 0.55s ease;
+}
+
+.icons i:hover {
+    color: #f1b04c;
+    transform: translateY(-5px);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 6%;
+    right: 9%;
+}
+
+.scroll-down i {
+    display: center;
+    padding: 12px;
+    font-size: 25px;
+    color: white;
+    background: #f1b04c;
+    border-radius: 20px;
+    transition: all 0.55s ease;
+}
+
+.scroll-down i:hover {
+    transform: translateY(-5px);
+}
+
+.Copyright {
+    position: absolute;
+    bottom: 6%;
+    left: 9%;
+    color: white;
+    font-size: small;
+}
+
+.hero-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 200px;
+    position: relative;
+}
+
+.poll-option {
+    width: 50px;
+    background-color: white;
+    cursor: pointer;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: height 0.5s ease, transform 0.5s ease;
+}
+
+#option1 {
+    height: 150px;
+}
+
+#option2 {
+    height: 250px;
+}
+
+#option3 {
+    height: 200px;
+}
+
+.poll-option:hover {
+    height: 300px;
+    transform: translateY(-100px);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .navlist {
+        display: none;
+    }
+
+    .hamburger {
+		display: flex;
+	}
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .hero-text {
+        margin-bottom: 45px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+    .hero-text h4 {
+        font-size: 18px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        margin: 0 10% 5% 10%;
+    }
+
+    .hero-text a {
+        margin: 10px;
+        font-size: 16px;
+    }
+
+    .hero-img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 15px;
+    }
+
+    .poll-option {
+        width: 35px;
+        background-color: white;
+        cursor: pointer;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        transition: height 0.5s ease, transform 0.5s ease;
+    }
+
+    #option1 {
+        height: 100px;
+    }
+
+    #option2 {
+        height: 120px;
+    }
+
+    #option3 {
+        height: 140px;
+    }
+
+    .poll-option:hover {
+        height: 160px;
+        transform: translateY(-50px);
+    }
+
+    .icons {
+        position: absolute;
+        left: calc(87% - 35px);
+        top: 69%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: -100px;
+    }
+
+    .icons i {
+        
+        color: white;
+        transition: all 0.55s ease;
+    }
+
+    .icons a {
+        height: 50px;
+    }
+
+    .icons i:hover {
+        color: #f1b04c;
+        transform: translateY(-5px);
+    }
+
+    .Copyright{
+        display: none;
+    }
+    .scroll-down {
+        display: none;
+    }
+}
